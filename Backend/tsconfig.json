@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    // Target latest version of ECMAScript
+    "target": "ES2020",
+    // Module system for Node.js
+    "module": "CommonJS",
+    // Where to look for type definitions
+    "lib": [
+      "ES2020"
+    ],
+    "types": [
+      "node"
+    ],
+    // Output directory
+    "outDir": "./dist",
+    // Root directory of source files
+    "rootDir": "./src",
+    // Strict type-checking options
+    "strict": true,
+    // Module resolution strategy
+    "moduleResolution": "node",
+    // Allow default imports from modules with no default export
+    "allowSyntheticDefaultImports": true,
+    // Interop between CommonJS and ES Modules
+    "esModuleInterop": true,
+    // Skip type checking of declaration files
+    "skipLibCheck": true,
+    // Ensure consistent casing in file names
+    "forceConsistentCasingInFileNames": true,
+    // Additional output options
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    // These are causing your issues - REMOVE or SET TO FALSE:
+    "verbatimModuleSyntax": false,
+    "isolatedModules": false,
+    "noUncheckedSideEffectImports": false,
+    "moduleDetection": "auto",
+    // Remove React-specific settings:
+    // "jsx": "react-jsx" - REMOVE THIS LINE
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
