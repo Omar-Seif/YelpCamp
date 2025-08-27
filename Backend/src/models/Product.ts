@@ -1,11 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
+import type { IProduct } from '../types/Product';
 
-
-interface IProduct {
-    name: string;
-    price: number;
-    category: 'fruit' | 'vegetable' | 'dairy';
-}
 
 const productSchema = new Schema({
     name: {
@@ -26,3 +21,4 @@ const productSchema = new Schema({
 
 const Product = mongoose.model<IProduct>('Product', productSchema);
 export default Product;
+
