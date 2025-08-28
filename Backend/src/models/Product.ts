@@ -14,8 +14,11 @@ const productSchema = new Schema({
     },
     category: {
         type: String,
+        required: true,
         enum: ['fruit', 'vegetable', 'dairy']
     }
+}, {
+    timestamps: true
 });
 
 
